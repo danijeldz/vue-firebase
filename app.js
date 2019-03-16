@@ -2,10 +2,24 @@ new Vue({
   el: "#app",
   data: {
     title: "Becoming a Vue Ninja",
-    name: "Ryu",
-    age: 25,
-    showAge: true,
-    showName: false
+    items: ["crystal", "mashroom", "banana", "star", "Green Shells"],
+    ninjas: [
+      {
+        name: "Crystal",
+        age: 15,
+        belt: "red"
+      },
+      {
+        name: "Ryu",
+        age: 19,
+        belt: "blue"
+      },
+      {
+        name: "Yoshi",
+        age: 27,
+        belt: "black"
+      }
+    ]
   },
   methods: {
     updateName(e) {

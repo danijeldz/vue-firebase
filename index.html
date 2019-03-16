@@ -6,23 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Vue Basics</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <style>
-      .canvas {
-        width: 300px;
-        height: 300px;
-        background: #ddd;
-        margin-top: 20px;
-      }
-    </style>
   </head>
   <body>
     <h1>Vue Basics</h1>
     <div id="app">
       <h2>{{ title }}</h2>
-      <p v-if="showName">{{ name }}</p>
-      <p v-else-if="showAge">{{ age }}</p>
-      <button @click="toggleAge">Show age: {{ showAge }}</button>
-      <button @click="toggleName">Show name: {{ showName }}</button>
+      <ul>
+        <li v-for="item in items">{{ item }}</li>
+      </ul>
+      <h2>Ninjas:</h2>
+      <div v-for="(ninja,index) in ninjas">
+        {{ index }}. {{ ninja.name }}, {{ ninja.age }}, {{ ninja.belt }}
+      </div>
     </div>
   </body>
   <script src="app.js"></script>
