@@ -19,14 +19,10 @@
     <h1>Vue Basics</h1>
     <div id="app">
       <h2>{{ title }}</h2>
-      <p>My name is {{ name }}</p>
-      <input type="text" v-model="name" />
-      <button v-on:click="logMe('I have been clicked!')">Click me!</button>
-      <a
-        href="https://www.duckduckgo.com"
-        v-on:click.prevent="logMe('You prevented my link from firing. You fat bastard!')"
-        >DuckDuckGo</a
-      >
+      <p v-if="showName">{{ name }}</p>
+      <p v-else-if="showAge">{{ age }}</p>
+      <button @click="toggleAge">Show age: {{ showAge }}</button>
+      <button @click="toggleName">Show name: {{ showName }}</button>
     </div>
   </body>
   <script src="app.js"></script>
