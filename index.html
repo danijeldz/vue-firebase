@@ -19,17 +19,14 @@
     <h1>Vue Basics</h1>
     <div id="app">
       <h2>{{ title }}</h2>
-      <p>I earn {{ wage }} € per hour.</p>
-      <button v-on:click="changeWage(1)">Increase wage by 1€</button>
-      <button v-on:click="changeWage(-1)">Decrease wage by 1€</button>
-      <button v-on:dblclick="changeWage(5)">Increase wage by 5€</button>
-      <button v-on:dblclick="changeWage(-5)">Decrease wage by 5€</button>
-
-      <button @click="logEvent">Log Event</button>
-
-      <div class="canvas" @mousemove="logCoords">
-        {{ coords.x }}, {{ coords.y }}
-      </div>
+      <p>My name is {{ name }}</p>
+      <input type="text" v-model="name" />
+      <button v-on:click="logMe('I have been clicked!')">Click me!</button>
+      <a
+        href="https://www.duckduckgo.com"
+        v-on:click.prevent="logMe('You prevented my link from firing. You fat bastard!')"
+        >DuckDuckGo</a
+      >
     </div>
   </body>
   <script src="app.js"></script>
