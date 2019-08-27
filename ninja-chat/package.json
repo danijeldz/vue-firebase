@@ -1,5 +1,5 @@
 {
-  "name": "ninja-smoothies",
+  "name": "ninja-chat",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "danijeldz <danijeldzankic@hotmail.com>",
@@ -10,9 +10,10 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "firebase": "^5.9.2",
-    "slugify": "^1.3.4",
+    "firebase": "^6.4.0",
+    "moment": "^2.24.0",
     "vue": "^2.5.2",
+    "vue-chat-scroll": "^1.3.5",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
