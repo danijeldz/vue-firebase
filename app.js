@@ -3,12 +3,12 @@ new Vue({
   data: {
     title: "Becoming a Vue Ninja",
     name: "Ryu",
-    url: "https://www.youtube.com",
+    url: "http://www.youtube.com",
     classes: ["one", "two"]
   },
   methods: {
     greet(time) {
-      return `Hello and good ${time}, ${this.name}.`;
+      return `Hello there and good ${time}, ${this.name}!`;
     }
   }
 });
