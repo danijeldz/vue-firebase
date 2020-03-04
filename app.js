@@ -1,14 +1,22 @@
 new Vue({
   el: "#app",
   data: {
-    title: "Becoming a Vue Ninja",
-    name: "Ryu",
+    title: "Vue Event Object",
+    name: "Shaun",
     url: "http://www.youtube.com",
-    classes: ["one", "two"]
+    classes: ["one", "two"],
+    coords: {
+      x: 0,
+      y: 0
+    }
   },
   methods: {
-    greet(time) {
-      return `Hello there and good ${time}, ${this.name}!`;
+    logEvent(e) {
+      console.log(e);
+    },
+    logCoords(e) {
+      this.coords.x = e.offsetX;
+      this.coords.y = e.offsetY;
     }
   }
 });

@@ -7,11 +7,11 @@
     <title>Vue Basics</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <style>
-      .one {
-        color: green;
-      }
-      .two {
-        text-decoration: line-through;
+      .canvas {
+        width: 300px;
+        height: 300px;
+        margin-top: 20px;
+        background: #ddd;
       }
     </style>
   </head>
@@ -19,14 +19,10 @@
     <h1>Vue Basics</h1>
     <div id="app">
       <h2>{{ title }}</h2>
-      <p>{{ greet('morning') }}</p>
-      <a v-bind:href="url">YouTube</a>
-      <div v-bind:class="classes">Classes from instance</div>
-      <p :class="classes">
-        Binding elements works also with just ":" characther instead of using
-        "v-bind:".
-      </p>
-      <input type="text" v-bind:value="name" />
+      <button @click="logEvent">Log Click Event</button>
+      <div class="canvas" @mousemove="logCoords">
+        {{ coords.x }}, {{ coords.y }}
+      </div>
     </div>
   </body>
   <script src="app.js"></script>
