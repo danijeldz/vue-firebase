@@ -19,14 +19,8 @@
     <h1>Vue Basics</h1>
     <div id="app">
       <h2>{{ title }}</h2>
-      <p>{{ greet('morning') }}</p>
-      <a v-bind:href="url">YouTube</a>
-      <div v-bind:class="classes">Classes from instance</div>
-      <p :class="classes">
-        Binding elements works also with just ":" characther instead of using
-        "v-bind:".
-      </p>
-      <input type="text" v-bind:value="name" />
+      <p>Hello {{ name }}</p>
+      <input type="text" v-model="name" />
     </div>
   </body>
   <script src="app.js"></script>
