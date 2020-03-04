@@ -7,8 +7,11 @@ new Vue({
     classes: ["one", "two"]
   },
   methods: {
-    greet(time) {
-      return `Hello there and good ${time}, ${this.name}!`;
+    logEvent() {
+      console.log("Oh, you used a modifier. Nicely done!");
+    },
+    logMessage() {
+      console.log("I've just prevented this link from firing to other page.");
     }
   }
 });
