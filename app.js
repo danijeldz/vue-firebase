@@ -3,12 +3,16 @@ new Vue({
   data: {
     title: "Becoming a Vue Ninja",
     name: "Ryu",
-    url: "http://www.youtube.com",
-    classes: ["one", "two"]
+    age: 36,
+    showName: true,
+    showAge: true
   },
   methods: {
-    greet(time) {
-      return `Hello there and good ${time}, ${this.name}!`;
+    toggleName() {
+      this.showName = !this.showName;
+    },
+    toggleAge() {
+      this.showAge = !this.showAge;
     }
   }
 });
