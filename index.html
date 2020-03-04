@@ -6,27 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Vue Basics</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <style>
-      .one {
-        color: green;
-      }
-      .two {
-        text-decoration: line-through;
-      }
-    </style>
+    <style></style>
   </head>
   <body>
     <h1>Vue Basics</h1>
     <div id="app">
       <h2>{{ title }}</h2>
-      <p>{{ greet('morning') }}</p>
-      <a v-bind:href="url">YouTube</a>
-      <div v-bind:class="classes">Classes from instance</div>
-      <p :class="classes">
-        Binding elements works also with just ":" characther instead of using
-        "v-bind:".
-      </p>
-      <input type="text" v-bind:value="name" />
+      <ul>
+        <li v-for="item in items">{{ item }}</li>
+      </ul>
+      <div v-for="(ninja, index) in ninjas">
+        <p>{{ index }} - {{ ninja.name }}</p>
+        <p>Age: {{ ninja.age }}</p>
+        <p>Belt colour: {{ ninja.belt }}</p>
+      </div>
     </div>
   </body>
   <script src="app.js"></script>
